@@ -6,15 +6,18 @@
 //  Copyright © 2020 fakhry fauzan. All rights reserved.
 //
 
-import UIKit
+import AsyncDisplayKit
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        self.view.backgroundColor = .gray
-    }
+class ViewController: ASViewController<ASDisplayNode> {
+    
+       init() {
+          super.init(node: ASDisplayNode())
+          self.node.backgroundColor = .brown
+       }
+       required init?(coder aDecoder: NSCoder) {
+          fatalError("init(coder:) has not been implemented")
+       }
+    
 
 
 }
